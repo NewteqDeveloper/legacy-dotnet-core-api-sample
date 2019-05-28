@@ -2,19 +2,27 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using dotnet_core_api_sample.Controllers.Base;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Options;
 
 namespace dotnet_core_api_sample.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class ValuesController : ControllerBase
+    public class ValuesController : ApiController
     {
+        private readonly string value;
+
+        public ValuesController(IConfiguration configuration)
+        {
+            this.value = configuration.GetSection("Custom").GetValue<string>("Value");
+        }
+        
         // GET api/values
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
-            return new string[] { "value1", "value2" };
+            return new string[] { "value1", "value2", this.value };
         }
 
         // GET api/values/5
