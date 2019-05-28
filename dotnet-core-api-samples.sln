@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.28803.452
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "extended-sample", "extended-sample\extended-sample.csproj", "{627129DA-9B42-476D-904F-C97A08B5791E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "standard-sample-with-ssl", "standard-sample\standard-sample-with-ssl.csproj", "{D8BABDA3-262C-4FB6-A06A-95E7C7E5C72C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "standard-sample-with-ssl", "standard-sample-wth-ssl\standard-sample-with-ssl.csproj", "{D8BABDA3-262C-4FB6-A06A-95E7C7E5C72C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
