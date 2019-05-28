@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "extended-sample", "extended
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "standard-sample-with-ssl", "standard-sample-wth-ssl\standard-sample-with-ssl.csproj", "{D8BABDA3-262C-4FB6-A06A-95E7C7E5C72C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "best-sample", "best-sample\best-sample.csproj", "{55310845-2FBA-4916-B9F7-28A943F0E868}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "best-sample", "BestSample\best-sample\best-sample.csproj", "{55310845-2FBA-4916-B9F7-28A943F0E868}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BestSample", "BestSample", "{EF9D0F41-E957-4BCF-8448-0AE53C4F4C66}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,6 +32,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{55310845-2FBA-4916-B9F7-28A943F0E868} = {EF9D0F41-E957-4BCF-8448-0AE53C4F4C66}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F50BED70-EF8E-41C2-8CCB-23CD0B3D4CCA}
