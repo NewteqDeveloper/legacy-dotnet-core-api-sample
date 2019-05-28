@@ -19,9 +19,18 @@ namespace dotnet_core_api_sample.Hosting
             var environment = hostBuilder.GetSetting("environment");
             var contentRoot = Directory.GetCurrentDirectory();
 
+            IConfigurationRoot hostingConfig;
+            var hostingBuilder = new ConfigurationBuilder();
+            hostingConfig = hostingBuilder
+                .SetBasePath(contentRoot)
+                .AddJsonFile("hosting.json", false)
+                .AddJsonFile($"hosting.{environment}.json", true)
+                .Build();
+
             var host = hostBuilder
                 .UseKestrel()
                 .UseContentRoot(contentRoot)
+                .UseConfiguration(hostingConfig)
                 // .UseConfiguration(CreateConfig(contentRoot, environment))
                 .ConfigureAppConfiguration((config) =>
                 {
