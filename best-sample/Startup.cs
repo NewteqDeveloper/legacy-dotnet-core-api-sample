@@ -9,7 +9,7 @@ namespace BestSample
 {
     public class Startup
     {
-        private readonly Settings settings;
+        private readonly ISettings settings;
 
         public Startup(IHostingEnvironment hostingEnvironment)
         {
