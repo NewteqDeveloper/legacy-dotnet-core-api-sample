@@ -1,0 +1,14 @@
+﻿{
+  "$schema": "http://json.schemastore.org/launchsettings.json",
+  "profiles": {
+    "extended-sample-API": {
+      "commandName": "Project",
+      "launchBrowser": false,
+      "launchUrl": "values",
+      "applicationUrl": "http://localhost:5001", // when clicking on the run button, this defines the port
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
