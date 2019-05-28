@@ -3,7 +3,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using System.IO;
 
-namespace dotnet_core_api_sample.Hosting
+namespace ExtendedSample.Hosting
 {
     public class HostBuilder
     {

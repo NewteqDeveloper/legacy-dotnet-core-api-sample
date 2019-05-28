@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using dotnet_core_api_sample.Controllers.Base;
+﻿using ExtendedSample.Controllers.Base;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Options;
+using System.Collections.Generic;
 
-namespace dotnet_core_api_sample.Controllers
+namespace ExtendedSample.Controllers
 {
     public class ValuesController : ApiController
     {
@@ -17,7 +13,13 @@ namespace dotnet_core_api_sample.Controllers
         {
             this.value = configuration.GetSection("Custom").GetValue<string>("Value");
         }
-        
+
+        // DELETE api/values/5
+        [HttpDelete("{id}")]
+        public void Delete(int id)
+        {
+        }
+
         // GET api/values
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
@@ -41,12 +43,6 @@ namespace dotnet_core_api_sample.Controllers
         // PUT api/values/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
         {
         }
     }

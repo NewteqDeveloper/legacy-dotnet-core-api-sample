@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28803.452
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dotnet-core-api-sample", "dotnet-core-api-sample\dotnet-core-api-sample.csproj", "{627129DA-9B42-476D-904F-C97A08B5791E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "extended-sample", "dotnet-core-api-sample\extended-sample.csproj", "{627129DA-9B42-476D-904F-C97A08B5791E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

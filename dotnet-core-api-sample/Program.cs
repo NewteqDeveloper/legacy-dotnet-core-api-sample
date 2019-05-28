@@ -1,8 +1,7 @@
-﻿using dotnet_core_api_sample.Hosting;
+﻿using ExtendedSample.Hosting;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
 
-namespace dotnet_core_api_sample
+namespace ExtendedSample
 {
     public class Program
     {
