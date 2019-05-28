@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
-using System;
 using System.IO;
 
 namespace dotnet_core_api_sample.Hosting
@@ -10,7 +9,6 @@ namespace dotnet_core_api_sample.Hosting
     {
         public HostBuilder()
         {
-            
         }
 
         public IWebHost Build<TStartup>()
@@ -31,7 +29,6 @@ namespace dotnet_core_api_sample.Hosting
                 .UseKestrel()
                 .UseContentRoot(contentRoot)
                 .UseConfiguration(hostingConfig)
-                // .UseConfiguration(CreateConfig(contentRoot, environment))
                 .ConfigureAppConfiguration((config) =>
                 {
                     CreateConfig(config, contentRoot, environment);
@@ -50,12 +47,10 @@ namespace dotnet_core_api_sample.Hosting
 
         private void CreateConfig(IConfigurationBuilder configurationBuilder, string contentRoot, string environmentName)
         {
-            var builder = configurationBuilder
+            configurationBuilder
                 .SetBasePath(contentRoot)
                 .AddJsonFile("appsettings.json", false, true)
                 .AddJsonFile($"appsettings.{environmentName}.json", true, true);
-
-             // return builder.Build();
         }
     }
 }
